@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Talleres — Instituto de Educación Integral</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'verde': '#11221f',
+            'crema': '#ecebe9',
+            'beige': '#dcd5cd',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Times New Roman', Times, serif; }
+
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(38px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    @keyframes fadeInLeft {
+      from { opacity:0; transform:translateX(-38px); }
+      to   { opacity:1; transform:translateX(0); }
+    }
+    @keyframes fadeInRight {
+      from { opacity:0; transform:translateX(38px); }
+      to   { opacity:1; transform:translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity:0; transform:scale(0.92); }
+      to   { opacity:1; transform:scale(1); }
+    }
+
+    .reveal { opacity: 0; }
+    .reveal.visible                    { animation: fadeInUp    0.8s ease forwards; }
+    .reveal.visible[data-dir="left"]   { animation: fadeInLeft  0.8s ease forwards; }
+    .reveal.visible[data-dir="right"]  { animation: fadeInRight 0.8s ease forwards; }
+    .reveal.visible[data-dir="scale"]  { animation: scaleIn     0.7s ease forwards; }
+
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.30s; }
+    .delay-3 { animation-delay: 0.45s; }
+
+    .btn-dark {
+      display:inline-block;
+      background:#11221f; color:#ecebe9;
+      padding:10px 28px; border:2px solid #11221f;
+      letter-spacing:.04em;
+      transition:background .3s,color .3s,transform .2s;
+    }
+    .btn-dark:hover  { background:transparent; color:#11221f; transform:scale(1.03); }
+
+    .btn-light {
+      display:inline-block;
+      background:transparent; color:#ecebe9;
+      padding:10px 28px; border:2px solid #ecebe9;
+      letter-spacing:.04em;
+      transition:background .3s,color .3s,transform .2s;
+    }
+    .btn-light:hover { background:#ecebe9; color:#11221f; transform:scale(1.03); }
+
+    .card-hover { transition:transform .3s,box-shadow .3s; }
+    .card-hover:hover { transform:translateY(-6px); box-shadow:0 14px 36px rgba(17,34,31,.18); }
+
+    .nav-link { position:relative; padding-bottom:3px; }
+    .nav-link::after {
+      content:''; position:absolute; left:0; bottom:0;
+      width:0; height:2px; background:#dcd5cd; transition:width .3s;
+    }
+    .nav-link:hover::after { width:100%; }
+    .nav-link.active::after { width:100%; }
+
+    .deco { width:48px; height:3px; background:#11221f; margin:0 auto 1rem; }
+    .deco-light { width:48px; height:2px; background:#dcd5cd; margin-bottom:1.25rem; }
+
+    .img-ph {
+      background:#dcd5cd;
+      display:flex; align-items:center; justify-content:center;
+      color:#11221f; font-style:italic; font-size:.85rem;
+    }
+
+    html { scroll-behavior:smooth; }
+  </style>
+</head>
+<body class="bg-crema text-verde">
+
+  <!-- Barra superior -->
+  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
+    <span>&#9742;&nbsp;0000-1111</span>
+    <span>&#9993;&nbsp;ia@iei.ed.cr</span>
+  </div>
+
+  <!-- Navegación -->
+  <header class="bg-verde sticky top-0 z-50 shadow-lg">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+          <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
+               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+        </div>
+        <div class="text-crema leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+          <div class="text-sm font-bold tracking-wide">Educación Integral</div>
+        </div>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+        <li><a href="index.html"       class="nav-link">Inicio</a></li>
+        <li><a href="talleres.html"    class="nav-link active">Talleres</a></li>
+        <li><a href="trabajando.html"  class="nav-link">Apoyo Académico</a></li>
+        <li><a href="trabajando.html"  class="nav-link">Noticias</a></li>
+        <li><a href="trabajando.html"  class="nav-link">Contacto</a></li>
+      </ul>
+
+      <button id="menuBtn" class="md:hidden text-crema focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </nav>
+
+    <div id="mobileMenu" class="hidden md:hidden bg-verde border-t border-crema/10 px-6 pb-4">
+      <ul class="flex flex-col gap-3 text-crema text-sm pt-3">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="trabajando.html">Apoyo Académico</a></li>
+        <li><a href="trabajando.html">Noticias</a></li>
+        <li><a href="trabajando.html">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO TALLERES
+  ============================================================ -->
+  <section class="bg-verde text-crema py-24 px-6 text-center">
+    <div class="max-w-3xl mx-auto">
+      <p class="reveal text-xs uppercase tracking-widest text-beige mb-3" data-dir="scale">
+        Instituto de Educación Integral
+      </p>
+      <h1 class="reveal delay-1 text-4xl lg:text-5xl font-bold leading-tight mb-6" data-dir="scale">
+        Talleres que desarrollan talento
+      </h1>
+      <p class="reveal delay-2 text-crema/70 text-base leading-relaxed" data-dir="scale">
+        Más allá del aula, el IEI ofrece espacios de práctica y creatividad donde cada
+        estudiante descubre sus pasiones y desarrolla habilidades para la vida.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TALLER 1 — DISEÑO GRÁFICO
+       Imagen izquierda / texto derecha
+  ============================================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+
+    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
+      <img src="IMG/taller_diseno.jpg" alt="Diseño Gráfico"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
+                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Diseño Gráfico</span>';" />
+      <!-- Fade derecho hacia texto crema -->
+      <div class="absolute inset-y-0 right-0 w-32 pointer-events-none"
+           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
+    </div>
+
+    <div class="bg-crema flex flex-col justify-center px-10 lg:px-16 py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
+        Taller 01
+      </span>
+      <h2 class="reveal text-3xl font-bold mb-5" data-dir="right">Diseño Gráfico</h2>
+      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+        Los estudiantes aprenden los fundamentos del diseño visual: tipografía, composición,
+        color y herramientas digitales. Un espacio para desarrollar la creatividad y la
+        comunicación visual aplicada a proyectos reales.
+      </p>
+      <div class="reveal delay-2" data-dir="right">
+        <a href="trabajando.html" class="btn-dark text-sm">Más información</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TALLER 2 — CIBERSEGURIDAD
+       Texto izquierda / imagen derecha
+  ============================================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+
+    <div class="bg-verde text-crema flex flex-col justify-center px-10 lg:px-16 py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-beige mb-2" data-dir="left">
+        Taller 02
+      </span>
+      <h2 class="reveal text-3xl font-bold mb-5" data-dir="left">Ciberseguridad</h2>
+      <p class="reveal delay-1 text-crema/75 text-sm leading-relaxed mb-8" data-dir="left">
+        En un mundo cada vez más digital, entender cómo proteger la información es esencial.
+        Este taller introduce a los estudiantes en conceptos de seguridad informática,
+        privacidad en línea y pensamiento crítico frente a amenazas digitales.
+      </p>
+      <div class="reveal delay-2" data-dir="left">
+        <a href="trabajando.html" class="btn-light text-sm">Más información</a>
+      </div>
+    </div>
+
+    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="right">
+      <img src="IMG/taller_ciber.jpg" alt="Ciberseguridad"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
+                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Ciberseguridad</span>';" />
+      <!-- Fade izquierdo hacia texto verde -->
+      <div class="absolute inset-y-0 left-0 w-32 pointer-events-none"
+           style="background: linear-gradient(to right, #11221f, transparent);"></div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TALLER 3 — BARISMO
+       Imagen izquierda / texto derecha
+  ============================================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+
+    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
+      <img src="IMG/taller_barismo.jpg" alt="Barismo"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
+                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Barismo</span>';" />
+      <!-- Fade derecho hacia texto beige -->
+      <div class="absolute inset-y-0 right-0 w-32 pointer-events-none"
+           style="background: linear-gradient(to left, #dcd5cd, transparent);"></div>
+    </div>
+
+    <div class="bg-beige flex flex-col justify-center px-10 lg:px-16 py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
+        Taller 03
+      </span>
+      <h2 class="reveal text-3xl font-bold mb-5" data-dir="right">Barismo</h2>
+      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+        El arte del café como disciplina técnica y sensorial. Los estudiantes aprenden a
+        preparar distintas bebidas a base de café, conocen los orígenes del grano, las
+        técnicas de extracción y el diseño en latte art.
+      </p>
+      <div class="reveal delay-2" data-dir="right">
+        <a href="trabajando.html" class="btn-dark text-sm">Más información</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TALLER 4 — GASTRONOMÍA
+       Texto izquierda / imagen derecha
+  ============================================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+
+    <div class="bg-verde text-crema flex flex-col justify-center px-10 lg:px-16 py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-beige mb-2" data-dir="left">
+        Taller 04
+      </span>
+      <h2 class="reveal text-3xl font-bold mb-5" data-dir="left">Gastronomía</h2>
+      <p class="reveal delay-1 text-crema/75 text-sm leading-relaxed mb-8" data-dir="left">
+        Un espacio culinario donde se explora la cocina nacional e internacional. Los
+        estudiantes desarrollan técnicas básicas de preparación, higiene alimentaria,
+        presentación de platos y trabajo en equipo dentro de una cocina profesional.
+      </p>
+      <div class="reveal delay-2" data-dir="left">
+        <a href="trabajando.html" class="btn-light text-sm">Más información</a>
+      </div>
+    </div>
+
+    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="right">
+      <img src="IMG/taller_gastro.jpg" alt="Gastronomía"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
+                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Gastronomía</span>';" />
+      <!-- Fade izquierdo hacia texto verde -->
+      <div class="absolute inset-y-0 left-0 w-32 pointer-events-none"
+           style="background: linear-gradient(to right, #11221f, transparent);"></div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       TALLER 5 — SELECCIONES DEPORTIVAS
+       Imagen izquierda / texto derecha
+  ============================================================ -->
+  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+
+    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
+      <img src="IMG/taller_deporte.jpg" alt="Selecciones Deportivas"
+           class="w-full h-full object-cover"
+           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
+                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Selecciones Deportivas</span>';" />
+      <!-- Fade derecho hacia texto crema -->
+      <div class="absolute inset-y-0 right-0 w-32 pointer-events-none"
+           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
+    </div>
+
+    <div class="bg-crema flex flex-col justify-center px-10 lg:px-16 py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
+        Taller 05
+      </span>
+      <h2 class="reveal text-3xl font-bold mb-5 leading-snug" data-dir="right">
+        Conformación de Selecciones Deportivas
+      </h2>
+      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+        El deporte como herramienta de formación integral. Desarrollamos selecciones
+        estudiantiles en diversas disciplinas, fomentando el trabajo en equipo, el
+        liderazgo, la disciplina y el espíritu competitivo con valores.
+      </p>
+      <div class="reveal delay-2" data-dir="right">
+        <a href="trabajando.html" class="btn-dark text-sm">Más información</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       CTA FINAL
+  ============================================================ -->
+  <section class="bg-verde text-crema py-20 px-6 text-center">
+    <div class="max-w-2xl mx-auto">
+      <div class="deco-light reveal mx-auto" data-dir="scale"></div>
+      <h2 class="reveal text-3xl font-bold mb-5" data-dir="scale">¿Te interesa algún taller?</h2>
+      <p class="reveal delay-1 text-crema/70 text-sm leading-relaxed mb-10" data-dir="scale">
+        Contáctanos para conocer horarios, requisitos y disponibilidad de cada programa.
+      </p>
+      <div class="reveal delay-2 flex flex-col sm:flex-row gap-4 justify-center" data-dir="scale">
+        <a href="trabajando.html" class="btn-light text-sm">Contacto</a>
+        <a href="index.html"      class="btn-light text-sm">Volver al inicio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="bg-verde text-crema pt-14 pb-8 px-6 border-t border-crema/10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+            <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
+                 onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+          </div>
+          <div class="leading-tight">
+            <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+            <div class="text-sm font-bold">Educación Integral</div>
+          </div>
+        </div>
+        <p class="text-crema/55 text-xs leading-relaxed">
+          Formación con excelencia, valores y propósito para la vida.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Enlace rápido</h4>
+        <ul class="space-y-2 text-crema/65 text-sm">
+          <li><a href="index.html"      class="hover:text-crema transition-colors">Inicio</a></li>
+          <li><a href="talleres.html"   class="hover:text-crema transition-colors">Talleres</a></li>
+          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Apoyo Académico</a></li>
+          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Noticias</a></li>
+          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Contacto</h4>
+        <ul class="space-y-3 text-crema/65 text-sm">
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            0000-1111
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            ia@iei.ed.cr
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            Las Nubes de Coronado,<br/>San José, Costa Rica
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Síguenos</h4>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-crema/10 pt-6 text-center text-crema/35 text-xs">
+      &copy; 2025 Instituto de Educación Integral. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn    = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
