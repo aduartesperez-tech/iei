@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Instituto de Educación Integral</title>
+  <link rel="icon" type="image/png" href="IMG/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -133,10 +134,9 @@
       <!-- Links desktop -->
       <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
         <li><a href="index.html"       class="nav-link">Inicio</a></li>
-        <li><a href="talleres.html"     class="nav-link">Talleres</a></li>
-        <li><a href="trabajando.html"  class="nav-link">Apoyo Académico</a></li>
-        <li><a href="trabajando.html"  class="nav-link">Noticias</a></li>
-        <li><a href="trabajando.html"  class="nav-link">Contacto</a></li>
+        <li><a href="nosotros.html"    class="nav-link">Sobre Nosotros</a></li>
+        <li><a href="talleres.html"    class="nav-link">Talleres</a></li>
+        <li><a href="contacto.html"    class="nav-link">Contacto</a></li>
       </ul>
 
       <!-- Hamburger -->
@@ -152,10 +152,9 @@
     <div id="mobileMenu" class="hidden md:hidden bg-verde border-t border-crema/10 px-6 pb-4">
       <ul class="flex flex-col gap-3 text-crema text-sm pt-3">
         <li><a href="index.html">Inicio</a></li>
-        <li><a href="trabajando.html">Talleres</a></li>
-        <li><a href="trabajando.html">Apoyo Académico</a></li>
-        <li><a href="trabajando.html">Noticias</a></li>
-        <li><a href="trabajando.html">Contacto</a></li>
+        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="talleres.html">Talleres</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
   </header>
@@ -176,12 +175,13 @@
 
       <p class="reveal delay-3 text-base text-verde/75 mb-8 max-w-md leading-relaxed"
          data-dir="left">
-        Nos dedicamos al desarrollo integral del estudiante: intelectual, humano y espiritual,
-        preparándolos con las habilidades y responsabilidad para contribuir en la sociedad.
+        Nos dedicamos al desarrollo integral del estudiante: académico, humano, emocional y social,
+        fomentando la autonomía, la creatividad y el pensamiento crítico para prepararlos para
+        la vida, el trabajo y la sociedad.
       </p>
 
       <div class="reveal delay-4" data-dir="left">
-        <a href="trabajando.html" class="btn-dark text-sm">Conoce más</a>
+        <a href="nosotros.html" class="btn-dark text-sm">Conoce más</a>
       </div>
     </div>
 
@@ -267,7 +267,7 @@
           </div>
           <h3 class="font-bold text-lg mb-2">Empoderamiento escolar</h3>
           <p class="text-sm text-verde/65 leading-relaxed">
-            Fomentamos autonomía, responsabilidad y liderazgo en cada alumno.
+            Fomentamos la autonomía, el pensamiento crítico y la creatividad como base del desarrollo personal de cada estudiante.
           </p>
         </div>
 
@@ -286,8 +286,9 @@
         Talleres que desarrollan talento
       </h2>
       <p class="reveal delay-1 text-crema/75 text-sm leading-relaxed mb-8" data-dir="left">
-        Una educación integral propone ir más allá del aula. Nuestros talleres desarrollan
-        pasiones, habilidades manuales y el aprendizaje significativo.
+        Una educación integral va más allá del aula. Nuestros talleres y proyectos como
+        <em>Nubesinos</em> desarrollan habilidades reales y facilitan la integración de los
+        jóvenes al mundo laboral.
       </p>
       <div class="reveal delay-2" data-dir="left">
         <a href="talleres.html" class="btn-light text-sm">Ver todos los talleres</a>
@@ -310,44 +311,6 @@
 
   </section>
 
-  <!-- ============================================================
-       APOYO ACADÉMICO
-  ============================================================ -->
-  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
-
-    <div class="reveal relative min-h-[340px] md:min-h-0 overflow-hidden order-2 md:order-1" data-dir="left">
-      <img
-        src="IMG/apoyo.jpg"
-        alt="Apoyo Académico IEI"
-        class="w-full h-full object-cover"
-        onerror="this.style.display='none';
-                 this.parentElement.classList.add('img-ph');
-                 this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Apoyo Académico</span>';"
-      />
-      <!-- Fade derecho: imagen → texto crema -->
-      <div class="absolute inset-y-0 right-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
-    </div>
-
-    <div class="bg-crema flex flex-col justify-center px-10 lg:px-20 py-16 order-1 md:order-2">
-      <div class="deco reveal" style="margin:0 0 1.25rem;" data-dir="right"></div>
-      <h2 class="reveal text-3xl font-bold mb-5 leading-snug" data-dir="right">
-        Apoyo académico para avanzar con confianza
-      </h2>
-      <p class="reveal delay-1 text-verde/80 text-sm leading-relaxed mb-3" data-dir="right">
-        En el IEI, el estudiante siempre es una prioridad.
-      </p>
-      <p class="reveal delay-2 text-verde/65 text-sm leading-relaxed mb-8" data-dir="right">
-        Si un estudiante necesita apoyo académico, ofrecemos espacios de refuerzo
-        personalizados. Nuestro equipo docente acompaña cada proceso con empatía y
-        dedicación para que nadie se quede atrás.
-      </p>
-      <div class="reveal delay-3" data-dir="right">
-        <a href="trabajando.html" class="btn-dark text-sm">Conocer más</a>
-      </div>
-    </div>
-
-  </section>
 
   <!-- ============================================================
        SOBRE NOSOTROS CTA
@@ -383,11 +346,11 @@
 
     <div class="reveal bg-verde text-crema flex flex-col justify-center px-10 lg:px-20 py-16" data-dir="right">
       <p class="text-crema/75 text-sm leading-relaxed mb-7">
-        En el IEI encontrarás un ambiente cálido, seguro y estimulante donde cada
-        estudiante puede florecer académica y personalmente.
+        En el IEI encontrarás un ambiente inclusivo, cálido y estimulante donde cada
+        estudiante recibe acompañamiento personalizado para desarrollar su máximo potencial.
       </p>
       <div>
-        <a href="trabajando.html" class="btn-light text-sm">Ir al sitio</a>
+        <a href="contacto.html" class="btn-light text-sm">Ir al sitio</a>
       </div>
     </div>
 
@@ -412,7 +375,7 @@
           </div>
         </div>
         <p class="text-crema/55 text-xs leading-relaxed">
-          Formación con excelencia, valores y propósito para la vida.
+          Unidos por el arte, la ciencia y la cultura.
         </p>
       </div>
 
@@ -421,11 +384,9 @@
         <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Enlace rápido</h4>
         <ul class="space-y-2 text-crema/65 text-sm">
           <li><a href="index.html"      class="hover:text-crema transition-colors">Inicio</a></li>
-          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Experiencia Educativa</a></li>
-          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Talleres</a></li>
-          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Apoyo Académico</a></li>
-          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Noticias</a></li>
-          <li><a href="trabajando.html" class="hover:text-crema transition-colors">Contacto</a></li>
+          <li><a href="nosotros.html"   class="hover:text-crema transition-colors">Sobre Nosotros</a></li>
+          <li><a href="talleres.html"   class="hover:text-crema transition-colors">Talleres</a></li>
+          <li><a href="contacto.html"   class="hover:text-crema transition-colors">Contacto</a></li>
         </ul>
       </div>
 

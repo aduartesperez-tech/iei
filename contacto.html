@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sobre Nosotros — Instituto de Educación Integral</title>
+  <title>Contacto — Instituto de Educación Integral</title>
   <link rel="icon" type="image/png" href="IMG/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -55,8 +55,9 @@
       padding:10px 28px; border:2px solid #11221f;
       letter-spacing:.04em;
       transition:background .3s,color .3s,transform .2s;
+      cursor:pointer;
     }
-    .btn-dark:hover  { background:transparent; color:#11221f; transform:scale(1.03); }
+    .btn-dark:hover { background:transparent; color:#11221f; transform:scale(1.03); }
 
     .nav-link { position:relative; padding-bottom:3px; }
     .nav-link::after {
@@ -64,14 +65,17 @@
       width:0; height:2px; background:#dcd5cd; transition:width .3s;
     }
     .nav-link:hover::after { width:100%; }
+    .nav-link.active::after { width:100%; }
 
     .deco { width:48px; height:3px; background:#11221f; margin:0 auto 1rem; }
 
-    .img-ph {
-      background:#dcd5cd;
-      display:flex; align-items:center; justify-content:center;
-      color:#11221f; font-style:italic; font-size:.85rem;
+    input, textarea, select {
+      width:100%; background:#fff; border:1px solid #dcd5cd;
+      padding:10px 14px; font-family:'Times New Roman',serif;
+      font-size:.9rem; color:#11221f; outline:none;
+      transition:border-color .2s;
     }
+    input:focus, textarea:focus { border-color:#11221f; }
 
     html { scroll-behavior:smooth; }
   </style>
@@ -99,10 +103,10 @@
       </a>
 
       <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
-        <li><a href="index.html"       class="nav-link">Inicio</a></li>
-        <li><a href="nosotros.html"    class="nav-link">Sobre Nosotros</a></li>
-        <li><a href="talleres.html"    class="nav-link">Talleres</a></li>
-        <li><a href="contacto.html"    class="nav-link">Contacto</a></li>
+        <li><a href="index.html"    class="nav-link">Inicio</a></li>
+        <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+        <li><a href="talleres.html" class="nav-link">Talleres</a></li>
+        <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
       </ul>
 
       <button id="menuBtn" class="md:hidden text-crema focus:outline-none">
@@ -130,122 +134,128 @@
         Instituto de Educación Integral
       </p>
       <h1 class="reveal delay-1 text-4xl lg:text-5xl font-bold leading-tight mb-6" data-dir="scale">
-        Sobre nosotros
+        Contáctenos
       </h1>
       <p class="reveal delay-2 text-crema/70 text-base leading-relaxed" data-dir="scale">
-        Con más de tres décadas transformando vidas a través de una educación inclusiva, humana y personalizada en Las Nubes de Coronado.
+        Estamos en Las Nubes de Coronado. Escríbanos, llámenos o visítenos.
+        Con gusto le atenderemos.
       </p>
     </div>
   </section>
 
-  <!-- Misión y Visión -->
+  <!-- Tarjetas de información -->
   <section class="py-20 px-6 bg-crema">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 mb-4">
 
-      <div class="reveal" data-dir="left">
-        <div style="width:48px;height:3px;background:#11221f;margin-bottom:1rem;"></div>
-        <h2 class="text-2xl font-bold mb-4">Nuestra Misión</h2>
-        <p class="text-verde/70 text-sm leading-relaxed">
-          Brindar una educación inclusiva, humana y personalizada que reconozca la singularidad de cada
-          estudiante, adaptando nuestras metodologías para fomentar la autonomía, la creatividad y el
-          pensamiento crítico, preparando a los jóvenes para la vida, el trabajo y la sociedad.
-        </p>
+      <div class="reveal delay-1 bg-beige p-8 text-center" data-dir="up">
+        <div class="flex justify-center mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2">Teléfono</h3>
+        <p class="text-sm text-verde/70">0000-1111</p>
       </div>
 
-      <div class="reveal" data-dir="right">
-        <div style="width:48px;height:3px;background:#11221f;margin-bottom:1rem;"></div>
-        <h2 class="text-2xl font-bold mb-4">Nuestra Visión</h2>
-        <p class="text-verde/70 text-sm leading-relaxed">
-          Ser una institución líder en educación integral e inclusiva, reconocida por su innovación,
-          excelencia académica y compromiso con el desarrollo de personas capaces de enfrentar los
-          retos del futuro con valores, creatividad y responsabilidad social.
-        </p>
+      <div class="reveal delay-2 bg-beige p-8 text-center" data-dir="up">
+        <div class="flex justify-center mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2">Correo</h3>
+        <p class="text-sm text-verde/70">ia@iei.ed.cr</p>
+      </div>
+
+      <div class="reveal delay-3 bg-beige p-8 text-center" data-dir="up">
+        <div class="flex justify-center mb-4">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+        </div>
+        <h3 class="font-bold text-base mb-2">Ubicación</h3>
+        <p class="text-sm text-verde/70">Las Nubes de Coronado,<br/>San José, Costa Rica</p>
       </div>
 
     </div>
   </section>
 
-  <!-- Valores -->
+  <!-- Formulario + Mapa -->
   <section class="bg-beige py-20 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="deco reveal" data-dir="scale"></div>
-      <h2 class="reveal text-3xl font-bold text-center mb-14" data-dir="scale">Nuestros Valores</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14">
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <div class="reveal delay-1 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Excelencia</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Nos esforzamos por alcanzar los más altos estándares académicos y personales en todo lo que hacemos.
-          </p>
-        </div>
-
-        <div class="reveal delay-2 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Integridad</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Actuamos con honestidad, transparencia y coherencia entre lo que pensamos, decimos y hacemos.
-          </p>
-        </div>
-
-        <div class="reveal delay-3 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Respeto</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Valoramos la diversidad y tratamos a cada persona con dignidad, empatía y consideración.
-          </p>
-        </div>
-
-        <div class="reveal delay-1 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Responsabilidad</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Asumimos el compromiso con nuestros actos y su impacto en la comunidad y el entorno.
-          </p>
-        </div>
-
-        <div class="reveal delay-2 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Comunidad</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Construimos vínculos sólidos entre estudiantes, familias y docentes para crecer juntos.
-          </p>
-        </div>
-
-        <div class="reveal delay-3 bg-crema p-7" data-dir="up">
-          <h3 class="font-bold text-lg mb-2">Innovación</h3>
-          <p class="text-sm text-verde/65 leading-relaxed">
-            Fomentamos el pensamiento creativo y la búsqueda de nuevas soluciones ante los desafíos del mundo.
-          </p>
-        </div>
-
+      <!-- Formulario -->
+      <div class="reveal" data-dir="left">
+        <div style="width:48px;height:3px;background:#11221f;margin-bottom:1.25rem;"></div>
+        <h2 class="text-2xl font-bold mb-6">Envíenos un mensaje</h2>
+        <form class="space-y-5" onsubmit="return false;">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs uppercase tracking-wide mb-1.5 text-verde/60">Nombre</label>
+              <input type="text" placeholder="Su nombre completo" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wide mb-1.5 text-verde/60">Correo electrónico</label>
+              <input type="email" placeholder="correo@ejemplo.com" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide mb-1.5 text-verde/60">Asunto</label>
+            <input type="text" placeholder="¿En qué le podemos ayudar?" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide mb-1.5 text-verde/60">Mensaje</label>
+            <textarea rows="5" placeholder="Escriba su mensaje aquí..."></textarea>
+          </div>
+          <div>
+            <button type="submit" class="btn-dark text-sm w-full text-center">Enviar mensaje</button>
+          </div>
+        </form>
       </div>
-    </div>
-  </section>
 
-  <!-- Imagen institución -->
-  <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
+      <!-- Mapa + Redes -->
+      <div class="reveal flex flex-col gap-8" data-dir="right">
+        <div>
+          <div style="width:48px;height:3px;background:#11221f;margin-bottom:1.25rem;"></div>
+          <h2 class="text-2xl font-bold mb-6">Cómo llegar</h2>
+          <div class="overflow-hidden" style="height:300px;">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.0!2d-83.99!3d9.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0e0c2a5e3b8d5%3A0x0!2sLas+Nubes+de+Coronado%2C+San+Jos%C3%A9%2C+Costa+Rica!5e0!3m2!1ses!2scr!4v1"
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade" title="Ubicación IEI">
+            </iframe>
+          </div>
+        </div>
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
-      <img src="IMG/casa_rosada.jpg" alt="Instituto de Educación Integral"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: IEI</span>';" />
-      <div class="absolute inset-y-0 right-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
-    </div>
-
-    <div class="bg-crema flex flex-col justify-center px-10 lg:px-16 py-16">
-      <div style="width:48px;height:3px;background:#11221f;margin-bottom:1.25rem;" class="reveal" data-dir="right"></div>
-      <h2 class="reveal text-3xl font-bold mb-5" data-dir="right">Nuestra historia</h2>
-      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
-        Fundado en la década de 1980 para brindar oportunidades a estudiantes que no encontraban
-        su lugar en el sistema educativo tradicional, el IEI se ha consolidado como un espacio de
-        crecimiento y acompañamiento en Las Nubes de Coronado. Promovemos el desarrollo humano,
-        emocional y social, e impulsamos iniciativas como <em>Nubesinos</em>, donde nuestros
-        estudiantes desarrollan emprendimientos reales para integrarse al mundo laboral.
-      </p>
-      <div class="reveal delay-2" data-dir="right">
-        <a href="contacto.html" class="btn-dark text-sm">Contacto</a>
+        <div>
+          <h3 class="font-bold text-base mb-4 uppercase tracking-wide text-verde/60 text-xs">Síguenos</h3>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener"
+               class="flex items-center gap-2 text-sm text-verde/70 hover:text-verde transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+              </svg>
+              Facebook — IEI CR
+            </a>
+            <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener"
+               class="flex items-center gap-2 text-sm text-verde/70 hover:text-verde transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
+                <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+              </svg>
+              @iei_cr
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
 
+    </div>
   </section>
 
   <!-- Footer -->
@@ -310,12 +320,14 @@
       <div>
         <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Síguenos</h4>
         <div class="flex gap-3">
-          <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+          <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener"
+             class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
           </a>
-          <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+          <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener"
+             class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
