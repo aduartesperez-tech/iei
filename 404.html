@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página no encontrada — IEI</title>
+  <link rel="icon" type="image/png" href="IMG/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'verde': '#11221f',
+            'crema': '#ecebe9',
+            'beige': '#dcd5cd',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Times New Roman', Times, serif; }
+    .nav-link { position:relative; padding-bottom:3px; }
+    .nav-link::after {
+      content:''; position:absolute; left:0; bottom:0;
+      width:0; height:2px; background:#dcd5cd; transition:width .3s;
+    }
+    .nav-link:hover::after { width:100%; }
+  </style>
+</head>
+<body class="bg-crema text-verde min-h-screen flex flex-col">
+
+  <!-- Barra superior -->
+  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
+    <a href="tel:25290676" class="hover:text-beige transition-colors">&#9742;&nbsp;2529 0676</a>
+    <a href="mailto:direccion@iei.ed.cr" class="hover:text-beige transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
+  </div>
+
+  <!-- Navegación -->
+  <header class="bg-verde shadow-lg">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+          <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
+               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+        </div>
+        <div class="text-crema leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+          <div class="text-sm font-bold tracking-wide">Educación Integral</div>
+        </div>
+      </a>
+      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+        <li><a href="index.html"    class="nav-link">Inicio</a></li>
+        <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+        <li><a href="talleres.html" class="nav-link">Talleres</a></li>
+        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <main class="flex-1 flex items-center justify-center px-6 py-24">
+    <div class="text-center max-w-lg">
+      <div class="text-8xl font-bold text-verde/10 mb-4 leading-none">404</div>
+      <h1 class="text-3xl font-bold mb-4">Página no encontrada</h1>
+      <p class="text-verde/65 text-base leading-relaxed mb-10">
+        La página que buscás no existe o fue movida.<br/>
+        Podés volver al inicio o explorar el sitio.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="index.html"
+           class="inline-block bg-verde text-crema px-8 py-3 border-2 border-verde
+                  hover:bg-transparent hover:text-verde transition-all duration-300 tracking-wide text-sm">
+          ← Volver al inicio
+        </a>
+        <a href="contacto.html"
+           class="inline-block bg-transparent text-verde px-8 py-3 border-2 border-verde
+                  hover:bg-verde hover:text-crema transition-all duration-300 tracking-wide text-sm">
+          Contacto
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-verde text-crema/40 text-xs text-center py-4">
+    &copy; 2026 Instituto de Educación Integral. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
