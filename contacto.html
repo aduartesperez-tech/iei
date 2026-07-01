@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -19,9 +19,10 @@
       theme: {
         extend: {
           colors: {
-            'verde': '#11221f',
-            'crema': '#ecebe9',
-            'beige': '#dcd5cd',
+            'azul':    '#1a2f5a',
+          'dorado':  '#c8a84b',
+            'perla': '#f7f5f1',
+            'celeste': '#dce6f5',
           }
         }
       }
@@ -59,57 +60,57 @@
 
     .btn-dark {
       display:inline-block;
-      background:#11221f; color:#ecebe9;
-      padding:10px 28px; border:2px solid #11221f;
+      background:#1a2f5a; color:#f7f5f1;
+      padding:10px 28px; border:2px solid #1a2f5a;
       letter-spacing:.04em;
       transition:background .3s,color .3s,transform .2s;
       cursor:pointer;
     }
-    .btn-dark:hover { background:transparent; color:#11221f; transform:scale(1.03); }
+    .btn-dark:hover { background:transparent; color:#1a2f5a; transform:scale(1.03); }
 
     .nav-link { position:relative; padding-bottom:3px; }
     .nav-link::after {
       content:''; position:absolute; left:0; bottom:0;
-      width:0; height:2px; background:#dcd5cd; transition:width .3s;
+      width:0; height:2px; background:#dce6f5; transition:width .3s;
     }
     .nav-link:hover::after { width:100%; }
     .nav-link.active::after { width:100%; }
 
-    .deco { width:48px; height:3px; background:#11221f; margin:0 auto 1rem; }
+    .deco { width:48px; height:3px; background:#c8a84b; margin:0 auto 1rem; }
 
     html { scroll-behavior:smooth; }
   </style>
 </head>
-<body class="bg-crema text-verde">
+<body class="bg-perla text-azul">
 
   <!-- Barra superior -->
-  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
-    <a href="tel:25290676" class="hover:text-beige transition-colors">&#9742;&nbsp;2529 0676</a>
-    <a href="mailto:direccion@iei.ed.cr" class="hover:text-beige transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
+  <div class="bg-azul text-perla text-xs py-1.5 px-6 flex justify-end gap-6">
+    <a href="tel:25290676" class="hover:text-celeste transition-colors">&#9742;&nbsp;2529 0676</a>
+    <a href="mailto:direccion@iei.ed.cr" class="hover:text-celeste transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
   </div>
 
   <!-- Navegación -->
-  <header class="bg-verde sticky top-0 z-50 shadow-lg">
+  <header class="bg-azul sticky top-0 z-50 shadow-lg">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
           <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+               onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
         </div>
-        <div class="text-crema leading-tight">
-          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+        <div class="text-perla leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
           <div class="text-sm font-bold tracking-wide">Educación Integral</div>
         </div>
       </a>
 
-      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+      <ul class="hidden md:flex items-center gap-7 text-perla text-sm">
         <li><a href="index.html"    class="nav-link">Inicio</a></li>
         <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
         <li><a href="talleres.html" class="nav-link">Talleres</a></li>
         <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
       </ul>
 
-      <button id="menuBtn" class="md:hidden text-crema focus:outline-none">
+      <button id="menuBtn" class="md:hidden text-perla focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16"/>
@@ -117,8 +118,8 @@
       </button>
     </nav>
 
-    <div id="mobileMenu" class="hidden md:hidden bg-verde border-t border-crema/10 px-6 pb-4">
-      <ul class="flex flex-col gap-3 text-crema text-sm pt-3">
+    <div id="mobileMenu" class="hidden md:hidden bg-azul border-t border-perla/10 px-6 pb-4">
+      <ul class="flex flex-col gap-3 text-perla text-sm pt-3">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Sobre Nosotros</a></li>
         <li><a href="talleres.html">Talleres</a></li>
@@ -128,15 +129,15 @@
   </header>
 
   <!-- Hero -->
-  <section class="bg-verde text-crema py-24 px-6 text-center">
+  <section class="bg-azul text-perla py-24 px-6 text-center">
     <div class="max-w-3xl mx-auto">
-      <p class="reveal text-xs uppercase tracking-widest text-beige mb-3" data-dir="scale">
+      <p class="reveal text-xs uppercase tracking-widest text-celeste mb-3" data-dir="scale">
         Instituto de Educación Integral
       </p>
       <h1 class="reveal delay-1 text-4xl lg:text-5xl font-bold leading-tight mb-6" data-dir="scale">
         Contáctenos
       </h1>
-      <p class="reveal delay-2 text-crema/70 text-base leading-relaxed" data-dir="scale">
+      <p class="reveal delay-2 text-perla/70 text-base leading-relaxed" data-dir="scale">
         Estamos en Las Nubes de Coronado. Escríbanos, llámenos o visítenos.
         Con gusto le atenderemos.
       </p>
@@ -144,10 +145,10 @@
   </section>
 
   <!-- Tarjetas de información -->
-  <section class="py-20 px-6 bg-crema">
+  <section class="py-20 px-6 bg-perla">
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 mb-4">
 
-      <div class="reveal delay-1 bg-beige p-8 text-center" data-dir="up">
+      <div class="reveal delay-1 bg-celeste p-8 text-center" data-dir="up">
         <div class="flex justify-center mb-4">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -155,10 +156,10 @@
           </svg>
         </div>
         <h3 class="font-bold text-base mb-2">Teléfono</h3>
-        <p class="text-sm text-verde/70">2529 0676</p>
+        <p class="text-sm text-azul/70">2529 0676</p>
       </div>
 
-      <div class="reveal delay-2 bg-beige p-8 text-center" data-dir="up">
+      <div class="reveal delay-2 bg-celeste p-8 text-center" data-dir="up">
         <div class="flex justify-center mb-4">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -166,10 +167,10 @@
           </svg>
         </div>
         <h3 class="font-bold text-base mb-2">Correo</h3>
-        <p class="text-sm text-verde/70">direccion@iei.ed.cr</p>
+        <p class="text-sm text-azul/70">direccion@iei.ed.cr</p>
       </div>
 
-      <div class="reveal delay-3 bg-beige p-8 text-center" data-dir="up">
+      <div class="reveal delay-3 bg-celeste p-8 text-center" data-dir="up">
         <div class="flex justify-center mb-4">
           <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -179,18 +180,18 @@
           </svg>
         </div>
         <h3 class="font-bold text-base mb-2">Ubicación</h3>
-        <p class="text-sm text-verde/70">Las Nubes de Coronado,<br/>San José, Costa Rica</p>
+        <p class="text-sm text-azul/70">Las Nubes de Coronado,<br/>San José, Costa Rica</p>
       </div>
 
     </div>
   </section>
 
   <!-- Mapa -->
-  <section class="bg-beige py-20 px-6">
+  <section class="bg-celeste py-20 px-6">
     <div class="max-w-6xl mx-auto">
 
       <div class="reveal" data-dir="scale">
-        <div style="width:48px;height:3px;background:#11221f;margin-bottom:1.25rem;"></div>
+        <div style="width:48px;height:3px;background:#c8a84b;margin-bottom:1.25rem;"></div>
         <h2 class="text-2xl font-bold mb-6">Cómo llegar</h2>
         <div class="overflow-hidden" style="height:420px;">
           <iframe
@@ -202,17 +203,17 @@
       </div>
 
       <div class="reveal mt-8" data-dir="up">
-        <h3 class="font-bold text-xs mb-4 uppercase tracking-wide text-verde/60">Síguenos</h3>
+        <h3 class="font-bold text-xs mb-4 uppercase tracking-wide text-azul/60">Síguenos</h3>
         <div class="flex gap-4">
           <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener"
-             class="flex items-center gap-2 text-sm text-verde/70 hover:text-verde transition-colors">
+             class="flex items-center gap-2 text-sm text-azul/70 hover:text-azul transition-colors">
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
             Facebook — IEI CR
           </a>
           <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener"
-             class="flex items-center gap-2 text-sm text-verde/70 hover:text-verde transition-colors">
+             class="flex items-center gap-2 text-sm text-azul/70 hover:text-azul transition-colors">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
@@ -227,38 +228,38 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-verde text-crema pt-14 pb-8 px-6 border-t border-crema/10">
+  <footer class="bg-azul text-perla pt-14 pb-8 px-6 border-t border-perla/10">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
 
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+          <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
             <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-                 onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+                 onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
           </div>
           <div class="leading-tight">
-            <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+            <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
             <div class="text-sm font-bold">Educación Integral</div>
           </div>
         </div>
-        <p class="text-crema/55 text-xs leading-relaxed">
+        <p class="text-perla/55 text-xs leading-relaxed">
           Unidos por el arte, la ciencia y la cultura.
         </p>
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Enlace rápido</h4>
-        <ul class="space-y-2 text-crema/65 text-sm">
-          <li><a href="index.html"      class="hover:text-crema transition-colors">Inicio</a></li>
-          <li><a href="nosotros.html"   class="hover:text-crema transition-colors">Sobre Nosotros</a></li>
-          <li><a href="talleres.html"   class="hover:text-crema transition-colors">Talleres</a></li>
-          <li><a href="contacto.html"   class="hover:text-crema transition-colors">Contacto</a></li>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Enlace rápido</h4>
+        <ul class="space-y-2 text-perla/65 text-sm">
+          <li><a href="index.html"      class="hover:text-perla transition-colors">Inicio</a></li>
+          <li><a href="nosotros.html"   class="hover:text-perla transition-colors">Sobre Nosotros</a></li>
+          <li><a href="talleres.html"   class="hover:text-perla transition-colors">Talleres</a></li>
+          <li><a href="contacto.html"   class="hover:text-perla transition-colors">Contacto</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Contacto</h4>
-        <ul class="space-y-3 text-crema/65 text-sm">
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Contacto</h4>
+        <ul class="space-y-3 text-perla/65 text-sm">
           <li class="flex items-start gap-2">
             <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -286,16 +287,16 @@
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Síguenos</h4>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Síguenos</h4>
         <div class="flex gap-3">
           <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener"
-             class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+             class="w-9 h-9 border border-perla/25 flex items-center justify-center hover:bg-perla/10 transition-colors">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
           </a>
           <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener"
-             class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+             class="w-9 h-9 border border-perla/25 flex items-center justify-center hover:bg-perla/10 transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
@@ -307,7 +308,7 @@
 
     </div>
 
-    <div class="border-t border-crema/10 pt-6 text-center text-crema/35 text-xs">
+    <div class="border-t border-perla/10 pt-6 text-center text-perla/35 text-xs">
       &copy; 2026 Instituto de Educación Integral. Todos los derechos reservados.
     </div>
   </footer>

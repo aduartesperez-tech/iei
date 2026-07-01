@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -11,9 +11,10 @@
       theme: {
         extend: {
           colors: {
-            'verde': '#11221f',
-            'crema': '#ecebe9',
-            'beige': '#dcd5cd',
+            'azul':    '#1a2f5a',
+          'dorado':  '#c8a84b',
+            'perla': '#f7f5f1',
+            'celeste': '#dce6f5',
           }
         }
       }
@@ -24,33 +25,33 @@
     .nav-link { position:relative; padding-bottom:3px; }
     .nav-link::after {
       content:''; position:absolute; left:0; bottom:0;
-      width:0; height:2px; background:#dcd5cd; transition:width .3s;
+      width:0; height:2px; background:#dce6f5; transition:width .3s;
     }
     .nav-link:hover::after { width:100%; }
   </style>
 </head>
-<body class="bg-crema text-verde min-h-screen flex flex-col">
+<body class="bg-perla text-azul min-h-screen flex flex-col">
 
   <!-- Barra superior -->
-  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
-    <a href="tel:25290676" class="hover:text-beige transition-colors">&#9742;&nbsp;2529 0676</a>
-    <a href="mailto:direccion@iei.ed.cr" class="hover:text-beige transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
+  <div class="bg-azul text-perla text-xs py-1.5 px-6 flex justify-end gap-6">
+    <a href="tel:25290676" class="hover:text-celeste transition-colors">&#9742;&nbsp;2529 0676</a>
+    <a href="mailto:direccion@iei.ed.cr" class="hover:text-celeste transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
   </div>
 
   <!-- Navegación -->
-  <header class="bg-verde shadow-lg">
+  <header class="bg-azul shadow-lg">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
           <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+               onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
         </div>
-        <div class="text-crema leading-tight">
-          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+        <div class="text-perla leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
           <div class="text-sm font-bold tracking-wide">Educación Integral</div>
         </div>
       </a>
-      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+      <ul class="hidden md:flex items-center gap-7 text-perla text-sm">
         <li><a href="index.html"    class="nav-link">Inicio</a></li>
         <li><a href="nosotros.html" class="nav-link">Sobre Nosotros</a></li>
         <li><a href="talleres.html" class="nav-link">Talleres</a></li>
@@ -62,28 +63,28 @@
   <!-- Contenido -->
   <main class="flex-1 flex items-center justify-center px-6 py-24">
     <div class="text-center max-w-lg">
-      <div class="text-8xl font-bold text-verde/10 mb-4 leading-none">404</div>
+      <div class="text-8xl font-bold text-azul/10 mb-4 leading-none">404</div>
       <h1 class="text-3xl font-bold mb-4">Página no encontrada</h1>
-      <p class="text-verde/65 text-base leading-relaxed mb-10">
+      <p class="text-azul/65 text-base leading-relaxed mb-10">
         La página que buscás no existe o fue movida.<br/>
         Podés volver al inicio o explorar el sitio.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="index.html"
-           class="inline-block bg-verde text-crema px-8 py-3 border-2 border-verde
-                  hover:bg-transparent hover:text-verde transition-all duration-300 tracking-wide text-sm">
+           class="inline-block bg-azul text-perla px-8 py-3 border-2 border-azul
+                  hover:bg-transparent hover:text-azul transition-all duration-300 tracking-wide text-sm">
           ← Volver al inicio
         </a>
         <a href="contacto.html"
-           class="inline-block bg-transparent text-verde px-8 py-3 border-2 border-verde
-                  hover:bg-verde hover:text-crema transition-all duration-300 tracking-wide text-sm">
+           class="inline-block bg-transparent text-azul px-8 py-3 border-2 border-azul
+                  hover:bg-azul hover:text-perla transition-all duration-300 tracking-wide text-sm">
           Contacto
         </a>
       </div>
     </div>
   </main>
 
-  <footer class="bg-verde text-crema/40 text-xs text-center py-4">
+  <footer class="bg-azul text-perla/40 text-xs text-center py-4">
     &copy; 2026 Instituto de Educación Integral. Todos los derechos reservados.
   </footer>
 

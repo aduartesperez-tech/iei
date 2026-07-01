@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -12,9 +12,10 @@
       theme: {
         extend: {
           colors: {
-            'verde': '#11221f',
-            'crema': '#ecebe9',
-            'beige': '#dcd5cd',
+            'azul':    '#1a2f5a',
+          'dorado':  '#c8a84b',
+            'perla': '#f7f5f1',
+            'celeste': '#dce6f5',
           }
         }
       }
@@ -41,7 +42,7 @@
     .nav-link { position:relative; padding-bottom:3px; }
     .nav-link::after {
       content:''; position:absolute; left:0; bottom:0;
-      width:0; height:2px; background:#dcd5cd;
+      width:0; height:2px; background:#c8a84b;
       transition:width .3s;
     }
     .nav-link:hover::after { width:100%; }
@@ -49,37 +50,37 @@
     html { scroll-behavior:smooth; }
   </style>
 </head>
-<body class="bg-crema text-verde min-h-screen flex flex-col">
+<body class="bg-perla text-azul min-h-screen flex flex-col">
 
   <!-- Barra superior -->
-  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
-    <a href="tel:25290676" class="hover:text-beige transition-colors">&#9742;&nbsp;2529 0676</a>
-    <a href="mailto:direccion@iei.ed.cr" class="hover:text-beige transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
+  <div class="bg-azul text-perla text-xs py-1.5 px-6 flex justify-end gap-6">
+    <a href="tel:25290676" class="hover:text-celeste transition-colors">&#9742;&nbsp;2529 0676</a>
+    <a href="mailto:direccion@iei.ed.cr" class="hover:text-celeste transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
   </div>
 
   <!-- Navegación -->
-  <header class="bg-verde shadow-lg">
+  <header class="bg-azul shadow-lg">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
           <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+               onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
         </div>
-        <div class="text-crema leading-tight">
-          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+        <div class="text-perla leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
           <div class="text-sm font-bold tracking-wide">Educación Integral</div>
         </div>
       </a>
 
-      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+      <ul class="hidden md:flex items-center gap-7 text-perla text-sm">
         <li><a href="index.html"       class="nav-link">Inicio</a></li>
         <li><a href="nosotros.html"    class="nav-link">Sobre Nosotros</a></li>
         <li><a href="talleres.html"    class="nav-link">Talleres</a></li>
         <li><a href="contacto.html"    class="nav-link">Contacto</a></li>
       </ul>
 
-      <button id="menuBtn" class="md:hidden text-crema focus:outline-none">
+      <button id="menuBtn" class="md:hidden text-perla focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16"/>
@@ -87,8 +88,8 @@
       </button>
     </nav>
 
-    <div id="mobileMenu" class="hidden md:hidden bg-verde border-t border-crema/10 px-6 pb-4">
-      <ul class="flex flex-col gap-3 text-crema text-sm pt-3">
+    <div id="mobileMenu" class="hidden md:hidden bg-azul border-t border-perla/10 px-6 pb-4">
+      <ul class="flex flex-col gap-3 text-perla text-sm pt-3">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Sobre Nosotros</a></li>
         <li><a href="talleres.html">Talleres</a></li>
@@ -103,7 +104,7 @@
 
       <!-- Icono de construcción -->
       <div class="w-20 h-20 mx-auto mb-8 flex items-center justify-center
-                  bg-verde text-crema rounded-full">
+                  bg-azul text-perla rounded-full">
         <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                 d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
@@ -116,19 +117,19 @@
 
       <!-- Puntos animados -->
       <div class="flex items-center justify-center gap-2 mb-6">
-        <span class="dot1 w-2.5 h-2.5 rounded-full bg-verde inline-block"></span>
-        <span class="dot2 w-2.5 h-2.5 rounded-full bg-verde inline-block"></span>
-        <span class="dot3 w-2.5 h-2.5 rounded-full bg-verde inline-block"></span>
+        <span class="dot1 w-2.5 h-2.5 rounded-full bg-azul inline-block"></span>
+        <span class="dot2 w-2.5 h-2.5 rounded-full bg-azul inline-block"></span>
+        <span class="dot3 w-2.5 h-2.5 rounded-full bg-azul inline-block"></span>
       </div>
 
-      <p class="text-verde/65 text-base leading-relaxed mb-10">
+      <p class="text-azul/65 text-base leading-relaxed mb-10">
         Esta sección está en construcción. Estamos trabajando para ofrecerte
         el mejor contenido. Pronto estará disponible.
       </p>
 
       <a href="index.html"
-         class="inline-block bg-verde text-crema px-8 py-3 border-2 border-verde
-                hover:bg-transparent hover:text-verde transition-all duration-300
+         class="inline-block bg-azul text-perla px-8 py-3 border-2 border-azul
+                hover:bg-transparent hover:text-azul transition-all duration-300
                 tracking-wide text-sm">
         ← Volver al inicio
       </a>
@@ -136,7 +137,7 @@
   </main>
 
   <!-- Footer mínimo -->
-  <footer class="bg-verde text-crema/40 text-xs text-center py-4">
+  <footer class="bg-azul text-perla/40 text-xs text-center py-4">
     &copy; 2026 Instituto de Educación Integral. Todos los derechos reservados.
   </footer>
 

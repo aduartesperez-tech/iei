@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -19,9 +19,10 @@
       theme: {
         extend: {
           colors: {
-            'verde': '#11221f',
-            'crema': '#ecebe9',
-            'beige': '#dcd5cd',
+            'azul':    '#1a2f5a',
+          'dorado':  '#c8a84b',
+            'perla': '#f7f5f1',
+            'celeste': '#dce6f5',
           }
         }
       }
@@ -59,21 +60,21 @@
 
     .btn-dark {
       display:inline-block;
-      background:#11221f; color:#ecebe9;
-      padding:10px 28px; border:2px solid #11221f;
+      background:#1a2f5a; color:#f7f5f1;
+      padding:10px 28px; border:2px solid #1a2f5a;
       letter-spacing:.04em;
       transition:background .3s,color .3s,transform .2s;
     }
-    .btn-dark:hover  { background:transparent; color:#11221f; transform:scale(1.03); }
+    .btn-dark:hover  { background:transparent; color:#1a2f5a; transform:scale(1.03); }
 
     .btn-light {
       display:inline-block;
-      background:transparent; color:#ecebe9;
-      padding:10px 28px; border:2px solid #ecebe9;
+      background:transparent; color:#f7f5f1;
+      padding:10px 28px; border:2px solid #f7f5f1;
       letter-spacing:.04em;
       transition:background .3s,color .3s,transform .2s;
     }
-    .btn-light:hover { background:#ecebe9; color:#11221f; transform:scale(1.03); }
+    .btn-light:hover { background:#f7f5f1; color:#1a2f5a; transform:scale(1.03); }
 
     .card-hover { transition:transform .3s,box-shadow .3s; }
     .card-hover:hover { transform:translateY(-6px); box-shadow:0 14px 36px rgba(17,34,31,.18); }
@@ -81,53 +82,53 @@
     .nav-link { position:relative; padding-bottom:3px; }
     .nav-link::after {
       content:''; position:absolute; left:0; bottom:0;
-      width:0; height:2px; background:#dcd5cd; transition:width .3s;
+      width:0; height:2px; background:#dce6f5; transition:width .3s;
     }
     .nav-link:hover::after { width:100%; }
     .nav-link.active::after { width:100%; }
 
-    .deco { width:48px; height:3px; background:#11221f; margin:0 auto 1rem; }
-    .deco-light { width:48px; height:2px; background:#dcd5cd; margin-bottom:1.25rem; }
+    .deco { width:48px; height:3px; background:#c8a84b; margin:0 auto 1rem; }
+    .deco-light { width:48px; height:2px; background:#c8a84b; margin-bottom:1.25rem; }
 
     .img-ph {
-      background:#dcd5cd;
+      background:#dce6f5;
       display:flex; align-items:center; justify-content:center;
-      color:#11221f; font-style:italic; font-size:.85rem;
+      color:#1a2f5a; font-style:italic; font-size:.85rem;
     }
 
     html { scroll-behavior:smooth; }
   </style>
 </head>
-<body class="bg-crema text-verde">
+<body class="bg-perla text-azul">
 
   <!-- Barra superior -->
-  <div class="bg-verde text-crema text-xs py-1.5 px-6 flex justify-end gap-6">
-    <a href="tel:25290676" class="hover:text-beige transition-colors">&#9742;&nbsp;2529 0676</a>
-    <a href="mailto:direccion@iei.ed.cr" class="hover:text-beige transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
+  <div class="bg-azul text-perla text-xs py-1.5 px-6 flex justify-end gap-6">
+    <a href="tel:25290676" class="hover:text-celeste transition-colors">&#9742;&nbsp;2529 0676</a>
+    <a href="mailto:direccion@iei.ed.cr" class="hover:text-celeste transition-colors">&#9993;&nbsp;direccion@iei.ed.cr</a>
   </div>
 
   <!-- Navegación -->
-  <header class="bg-verde sticky top-0 z-50 shadow-lg">
+  <header class="bg-azul sticky top-0 z-50 shadow-lg">
     <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+        <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
           <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-               onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+               onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
         </div>
-        <div class="text-crema leading-tight">
-          <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+        <div class="text-perla leading-tight">
+          <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
           <div class="text-sm font-bold tracking-wide">Educación Integral</div>
         </div>
       </a>
 
-      <ul class="hidden md:flex items-center gap-7 text-crema text-sm">
+      <ul class="hidden md:flex items-center gap-7 text-perla text-sm">
         <li><a href="index.html"       class="nav-link">Inicio</a></li>
         <li><a href="nosotros.html"    class="nav-link">Sobre Nosotros</a></li>
         <li><a href="talleres.html"    class="nav-link active">Talleres</a></li>
         <li><a href="contacto.html"    class="nav-link">Contacto</a></li>
       </ul>
 
-      <button id="menuBtn" class="md:hidden text-crema focus:outline-none">
+      <button id="menuBtn" class="md:hidden text-perla focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16"/>
@@ -135,8 +136,8 @@
       </button>
     </nav>
 
-    <div id="mobileMenu" class="hidden md:hidden bg-verde border-t border-crema/10 px-6 pb-4">
-      <ul class="flex flex-col gap-3 text-crema text-sm pt-3">
+    <div id="mobileMenu" class="hidden md:hidden bg-azul border-t border-perla/10 px-6 pb-4">
+      <ul class="flex flex-col gap-3 text-perla text-sm pt-3">
         <li><a href="index.html">Inicio</a></li>
         <li><a href="nosotros.html">Sobre Nosotros</a></li>
         <li><a href="talleres.html">Talleres</a></li>
@@ -148,15 +149,15 @@
   <!-- ============================================================
        HERO TALLERES
   ============================================================ -->
-  <section class="bg-verde text-crema py-24 px-6 text-center">
+  <section class="bg-azul text-perla py-24 px-6 text-center">
     <div class="max-w-3xl mx-auto">
-      <p class="reveal text-xs uppercase tracking-widest text-beige mb-3" data-dir="scale">
+      <p class="reveal text-xs uppercase tracking-widest text-celeste mb-3" data-dir="scale">
         Instituto de Educación Integral
       </p>
       <h1 class="reveal delay-1 text-4xl lg:text-5xl font-bold leading-tight mb-6" data-dir="scale">
         Talleres que desarrollan talento
       </h1>
-      <p class="reveal delay-2 text-crema/70 text-base leading-relaxed" data-dir="scale">
+      <p class="reveal delay-2 text-perla/70 text-base leading-relaxed" data-dir="scale">
         Más allá del aula, el IEI ofrece espacios de práctica y creatividad donde cada
         estudiante descubre sus pasiones y desarrolla habilidades para la vida.
       </p>
@@ -169,22 +170,16 @@
   ============================================================ -->
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
-      <img src="IMG/taller_diseno.jpg" alt="Diseño Gráfico"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Diseño Gráfico</span>';" />
-      <!-- Fade derecho hacia texto crema -->
-      <div class="hidden md:block absolute inset-y-0 right-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
+    <div class="reveal bg-celeste flex items-center justify-center py-16 px-8" data-dir="left">
+      <div class="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-azul/10">
+        <img src="IMG/taller_diseno.jpg" alt="Diseño Gráfico" class="w-full h-full object-cover" />
+      </div>
     </div>
 
-    <div class="bg-crema flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
-      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
-        Taller 01
-      </span>
+    <div class="bg-perla flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-dorado mb-2" data-dir="right">Taller 01</span>
       <h2 class="reveal text-3xl font-bold mb-5" data-dir="right">Diseño Gráfico</h2>
-      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+      <p class="reveal delay-1 text-azul/70 text-sm leading-relaxed mb-8" data-dir="right">
         Los estudiantes aprenden los fundamentos del diseño visual: tipografía, composición,
         color y herramientas digitales. Un espacio para desarrollar la creatividad y la
         comunicación visual aplicada a proyectos reales.
@@ -202,12 +197,12 @@
   ============================================================ -->
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
 
-    <div class="bg-verde text-crema flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
-      <span class="reveal text-xs uppercase tracking-widest text-beige mb-2" data-dir="left">
+    <div class="bg-azul text-perla flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-celeste mb-2" data-dir="left">
         Taller 02
       </span>
       <h2 class="reveal text-3xl font-bold mb-5" data-dir="left">Ciberseguridad</h2>
-      <p class="reveal delay-1 text-crema/75 text-sm leading-relaxed mb-8" data-dir="left">
+      <p class="reveal delay-1 text-perla/75 text-sm leading-relaxed mb-8" data-dir="left">
         En un mundo cada vez más digital, entender cómo proteger la información es esencial.
         Este taller introduce a los estudiantes en conceptos de seguridad informática,
         privacidad en línea y pensamiento crítico frente a amenazas digitales.
@@ -217,14 +212,10 @@
       </div>
     </div>
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="right">
-      <img src="IMG/taller_ciber.jpg" alt="Ciberseguridad"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Ciberseguridad</span>';" />
-      <!-- Fade izquierdo hacia texto verde -->
-      <div class="hidden md:block absolute inset-y-0 left-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to right, #11221f, transparent);"></div>
+    <div class="reveal bg-azul/10 flex items-center justify-center py-16 px-8" data-dir="right">
+      <div class="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-azul/20">
+        <img src="IMG/taller_ciber.jpg" alt="Ciberseguridad" class="w-full h-full object-cover" />
+      </div>
     </div>
 
   </section>
@@ -235,22 +226,18 @@
   ============================================================ -->
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
-      <img src="IMG/taller_barismo.jpg" alt="Barismo"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Barismo</span>';" />
-      <!-- Fade derecho hacia texto beige -->
-      <div class="hidden md:block absolute inset-y-0 right-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to left, #dcd5cd, transparent);"></div>
+    <div class="reveal bg-celeste flex items-center justify-center py-16 px-8" data-dir="left">
+      <div class="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-azul/10">
+        <img src="IMG/taller_barismo.jpg" alt="Barismo" class="w-full h-full object-cover" />
+      </div>
     </div>
 
-    <div class="bg-beige flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
-      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
+    <div class="bg-celeste flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-azul/50 mb-2" data-dir="right">
         Taller 03
       </span>
       <h2 class="reveal text-3xl font-bold mb-5" data-dir="right">Barismo</h2>
-      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+      <p class="reveal delay-1 text-azul/70 text-sm leading-relaxed mb-8" data-dir="right">
         El arte del café como disciplina técnica y sensorial. Los estudiantes aprenden a
         preparar distintas bebidas a base de café, conocen los orígenes del grano, las
         técnicas de extracción y el diseño en latte art.
@@ -268,12 +255,12 @@
   ============================================================ -->
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
 
-    <div class="bg-verde text-crema flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
-      <span class="reveal text-xs uppercase tracking-widest text-beige mb-2" data-dir="left">
+    <div class="bg-azul text-perla flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-celeste mb-2" data-dir="left">
         Taller 04
       </span>
       <h2 class="reveal text-3xl font-bold mb-5" data-dir="left">Gastronomía</h2>
-      <p class="reveal delay-1 text-crema/75 text-sm leading-relaxed mb-8" data-dir="left">
+      <p class="reveal delay-1 text-perla/75 text-sm leading-relaxed mb-8" data-dir="left">
         Un espacio culinario donde se explora la cocina nacional e internacional. Los
         estudiantes desarrollan técnicas básicas de preparación, higiene alimentaria,
         presentación de platos y trabajo en equipo dentro de una cocina profesional.
@@ -283,14 +270,10 @@
       </div>
     </div>
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="right">
-      <img src="IMG/taller_gastro.jpg" alt="Gastronomía"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Gastronomía</span>';" />
-      <!-- Fade izquierdo hacia texto verde -->
-      <div class="hidden md:block absolute inset-y-0 left-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to right, #11221f, transparent);"></div>
+    <div class="reveal bg-azul/10 flex items-center justify-center py-16 px-8" data-dir="right">
+      <div class="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-azul/20">
+        <img src="IMG/taller_gastro.jpg" alt="Gastronomía" class="w-full h-full object-cover" />
+      </div>
     </div>
 
   </section>
@@ -301,24 +284,20 @@
   ============================================================ -->
   <section class="grid grid-cols-1 md:grid-cols-2 min-h-[480px]">
 
-    <div class="reveal relative min-h-[320px] md:min-h-0 overflow-hidden" data-dir="left">
-      <img src="IMG/taller_deporte.jpg" alt="Selecciones Deportivas"
-           class="w-full h-full object-cover"
-           onerror="this.style.display='none'; this.parentElement.classList.add('img-ph');
-                    this.parentElement.innerHTML += '<span style=\'position:absolute\'>Imagen: Selecciones Deportivas</span>';" />
-      <!-- Fade derecho hacia texto crema -->
-      <div class="hidden md:block absolute inset-y-0 right-0 w-32 pointer-events-none"
-           style="background: linear-gradient(to left, #ecebe9, transparent);"></div>
+    <div class="reveal bg-celeste flex items-center justify-center py-16 px-8" data-dir="left">
+      <div class="w-64 h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl ring-4 ring-azul/10">
+        <img src="IMG/taller_deporte.jpg" alt="Selecciones Deportivas" class="w-full h-full object-cover" />
+      </div>
     </div>
 
-    <div class="bg-crema flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
-      <span class="reveal text-xs uppercase tracking-widest text-verde/50 mb-2" data-dir="right">
+    <div class="bg-perla flex flex-col justify-center px-6 md:px-10 lg:px-16 py-12 md:py-16">
+      <span class="reveal text-xs uppercase tracking-widest text-dorado mb-2" data-dir="right">
         Taller 05
       </span>
       <h2 class="reveal text-3xl font-bold mb-5 leading-snug" data-dir="right">
         Conformación de Selecciones Deportivas
       </h2>
-      <p class="reveal delay-1 text-verde/70 text-sm leading-relaxed mb-8" data-dir="right">
+      <p class="reveal delay-1 text-azul/70 text-sm leading-relaxed mb-8" data-dir="right">
         El deporte como herramienta de formación integral. Desarrollamos selecciones
         estudiantiles en diversas disciplinas, fomentando el trabajo en equipo, el
         liderazgo, la disciplina y el espíritu competitivo con valores.
@@ -333,11 +312,11 @@
   <!-- ============================================================
        CTA FINAL
   ============================================================ -->
-  <section class="bg-verde text-crema py-20 px-6 text-center">
+  <section class="bg-azul text-perla py-20 px-6 text-center">
     <div class="max-w-2xl mx-auto">
       <div class="deco-light reveal mx-auto" data-dir="scale"></div>
       <h2 class="reveal text-3xl font-bold mb-5" data-dir="scale">¿Te interesa algún taller?</h2>
-      <p class="reveal delay-1 text-crema/70 text-sm leading-relaxed mb-10" data-dir="scale">
+      <p class="reveal delay-1 text-perla/70 text-sm leading-relaxed mb-10" data-dir="scale">
         Contáctanos para conocer horarios, requisitos y disponibilidad de cada programa.
       </p>
       <div class="reveal delay-2 flex flex-col sm:flex-row gap-4 justify-center" data-dir="scale">
@@ -350,14 +329,14 @@
   <!-- ============================================================
        SOFTIA — IA EDUCATIVA
   ============================================================ -->
-  <section class="bg-crema py-20 px-6">
+  <section class="bg-perla py-20 px-6">
     <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
 
       <div class="flex-1 reveal" data-dir="left">
-        <div style="width:48px;height:3px;background:#11221f;margin-bottom:1.25rem;"></div>
-        <p class="text-xs uppercase tracking-widest text-verde/50 mb-2">Herramienta digital</p>
+        <div style="width:48px;height:3px;background:#c8a84b;margin-bottom:1.25rem;"></div>
+        <p class="text-xs uppercase tracking-widest text-azul/50 mb-2">Herramienta digital</p>
         <h2 class="text-3xl font-bold mb-5">SOFTIA — Tu asistente inteligente</h2>
-        <p class="text-verde/70 text-sm leading-relaxed mb-8">
+        <p class="text-azul/70 text-sm leading-relaxed mb-8">
           El IEI pone a disposición de sus estudiantes y familias <strong>SOFTIA</strong>,
           una plataforma de inteligencia artificial diseñada para apoyar el aprendizaje,
           resolver dudas y acompañar el proceso educativo de manera personalizada.
@@ -368,8 +347,8 @@
       </div>
 
       <div class="flex-shrink-0 reveal" data-dir="right">
-        <div class="w-48 h-48 rounded-full bg-verde flex items-center justify-center shadow-xl">
-          <svg class="w-20 h-20 text-crema" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="w-48 h-48 rounded-full bg-azul flex items-center justify-center shadow-xl">
+          <svg class="w-20 h-20 text-perla" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"
                   d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1 1 .3 2.7-1.119 2.7H3.919c-1.419 0-2.12-1.7-1.12-2.7L4.18 15.3M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
           </svg>
@@ -382,38 +361,38 @@
   <!-- ============================================================
        FOOTER
   ============================================================ -->
-  <footer class="bg-verde text-crema pt-14 pb-8 px-6 border-t border-crema/10">
+  <footer class="bg-azul text-perla pt-14 pb-8 px-6 border-t border-perla/10">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
 
       <div>
         <div class="flex items-center gap-3 mb-4">
-          <div class="w-10 h-10 rounded-full overflow-hidden bg-beige/20 flex items-center justify-center shrink-0">
+          <div class="w-10 h-10 rounded-full overflow-hidden bg-celeste/20 flex items-center justify-center shrink-0">
             <img src="IMG/logo.png" alt="Logo IEI" class="w-full h-full object-cover"
-                 onerror="this.parentElement.innerHTML='<span class=\'text-crema text-xs font-bold\'>IEI</span>';" />
+                 onerror="this.parentElement.innerHTML='<span class=\'text-perla text-xs font-bold\'>IEI</span>';" />
           </div>
           <div class="leading-tight">
-            <div class="text-[10px] uppercase tracking-widest text-beige">Instituto de</div>
+            <div class="text-[10px] uppercase tracking-widest text-celeste">Instituto de</div>
             <div class="text-sm font-bold">Educación Integral</div>
           </div>
         </div>
-        <p class="text-crema/55 text-xs leading-relaxed">
+        <p class="text-perla/55 text-xs leading-relaxed">
           Unidos por el arte, la ciencia y la cultura.
         </p>
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Enlace rápido</h4>
-        <ul class="space-y-2 text-crema/65 text-sm">
-          <li><a href="index.html"      class="hover:text-crema transition-colors">Inicio</a></li>
-          <li><a href="nosotros.html"   class="hover:text-crema transition-colors">Sobre Nosotros</a></li>
-          <li><a href="talleres.html"   class="hover:text-crema transition-colors">Talleres</a></li>
-          <li><a href="contacto.html"   class="hover:text-crema transition-colors">Contacto</a></li>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Enlace rápido</h4>
+        <ul class="space-y-2 text-perla/65 text-sm">
+          <li><a href="index.html"      class="hover:text-perla transition-colors">Inicio</a></li>
+          <li><a href="nosotros.html"   class="hover:text-perla transition-colors">Sobre Nosotros</a></li>
+          <li><a href="talleres.html"   class="hover:text-perla transition-colors">Talleres</a></li>
+          <li><a href="contacto.html"   class="hover:text-perla transition-colors">Contacto</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Contacto</h4>
-        <ul class="space-y-3 text-crema/65 text-sm">
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Contacto</h4>
+        <ul class="space-y-3 text-perla/65 text-sm">
           <li class="flex items-start gap-2">
             <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -441,14 +420,14 @@
       </div>
 
       <div>
-        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-beige">Síguenos</h4>
+        <h4 class="font-bold text-sm mb-4 uppercase tracking-wide text-celeste">Síguenos</h4>
         <div class="flex gap-3">
-          <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+          <a href="https://www.facebook.com/ieicr" target="_blank" rel="noopener" class="w-9 h-9 border border-perla/25 flex items-center justify-center hover:bg-perla/10 transition-colors">
             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
             </svg>
           </a>
-          <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener" class="w-9 h-9 border border-crema/25 flex items-center justify-center hover:bg-crema/10 transition-colors">
+          <a href="https://www.instagram.com/iei_cr/" target="_blank" rel="noopener" class="w-9 h-9 border border-perla/25 flex items-center justify-center hover:bg-perla/10 transition-colors">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" stroke-width="1.5"/>
               <circle cx="12" cy="12" r="4" stroke-width="1.5"/>
@@ -460,7 +439,7 @@
 
     </div>
 
-    <div class="border-t border-crema/10 pt-6 text-center text-crema/35 text-xs">
+    <div class="border-t border-perla/10 pt-6 text-center text-perla/35 text-xs">
       &copy; 2026 Instituto de Educación Integral. Todos los derechos reservados.
     </div>
   </footer>
